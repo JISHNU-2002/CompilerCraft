@@ -1,0 +1,31 @@
+token	lexeme
+--------------
+include	identifier
+stdio	identifier
+h	identifier
+int	keyword
+main	identifier
+)	special symbol
+{	special symbol
+int	keyword
+num1	identifier
+5	digit
+,	special symbol
+num2	identifier
+1	digit
+0	digit
+;	special symbol
+int	keyword
+sum	identifier
+num1	identifier
+num2	identifier
+printf	identifier
+"	special symbol
+sum = %d\n	string
+,	special symbol
+sum	identifier
+;	special symbol
+return	keyword
+0	digit
+;	special symbol
+}	special symbol
