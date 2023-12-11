@@ -77,3 +77,52 @@ To run YACC program ( + Lex)
 
     - switch [( SWITCH )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/09%20SWITCH)
 
+
+# CSL411 COMPILER LAB
+
+## SYLLABUS
+
+1. Implementation of lexical analyzer using the tool LEX
+
+2. Implementation of Syntax analyzer using the tool YACC
+3. Application problems using NFA and DFA
+4. Implement Top-Down Parser
+5. Simulation of code optimization Techniques
+6. Implement Intermediate code generation for simple expressions
+7. Implement the back end of the compiler
+
+## PRACTICE QUESTIONS
+
+- Design and implement a lexical analyzer using C language to recognize all valid tokens in the input program. The lexical analyzer should ignore redundant spaces, tabs and newlines. It should also ignore comments
+
+- Implement a Lexical Analyzer for a given program using Lex Tool
+
+- Write a lex program to display the number of lines, words and characters in an input text
+
+- Write a LEX Program to convert the substring abc to ABC from the given input string
+
+- Write a lex program to find out total number of vowels and consonants from the given input string
+
+- Generate a YACC specification to recognize a valid arithmetic expression that uses operators +, – , *,/ and parenthesis
+
+- Generate a YACC specification to recognize a valid identifier which starts with a letter followed by any number of letters or digits
+
+- Implementation of Calculator using LEX and YACC
+
+- Write a program to find ε – closure of all states of any given NFA with ε transition
+
+- Write a program to convert NFA with ε transition to NFA without ε transition
+
+- Write a program to convert NFA to DFA
+
+- Write a program to minimize any given DFA
+
+- Write a program to find First and Follow of any given grammar
+
+- Design and implement a recursive descent parser for a given grammar
+
+- Write a program to perform constant propagation
+
+- Implement Intermediate code generation for simple expressions
+
+- Implement the back end of the compiler which takes the three address code and produces the 8086 assembly language instructions that can be assembled and run using an 8086 assembler. The target assembly instructions can be simple move,add, sub, jump etc.
