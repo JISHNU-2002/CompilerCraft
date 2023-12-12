@@ -1,5 +1,6 @@
 %{
     #include<stdio.h>
+    #include<stdlib.h>
 %}
 
 %token NUM
@@ -20,14 +21,14 @@ E: E '+' E { $$ = $1 + $3; }
     if($3 != 0){
         $$ = $1 / $3;
     }else{
-        yyerror("Division by zero");
+        yyerror();
     }
 }
 | E'%'E {
     if($3 != 0){
         $$ = $1 % $3;
     }else{
-        yyerror("Modulo by zero");
+        yyerror();
     }
 }
 | '(' E ')' { $$ = $2; }
@@ -37,7 +38,7 @@ E: E '+' E { $$ = $1 + $3; }
 
 int yyerror(){
     printf("Entered arithmetic expression is Invalid\n");
-    return 1;
+    exit(0);
 }
 
 int main(){

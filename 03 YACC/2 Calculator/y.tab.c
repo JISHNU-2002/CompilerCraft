@@ -70,8 +70,9 @@
 #line 1 "calculator.y"
 
     #include<stdio.h>
+    #include<stdlib.h>
 
-#line 75 "y.tab.c"
+#line 76 "y.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -544,7 +545,7 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    11,    11,    16,    17,    18,    19,    27,    35,    36
+       0,    12,    12,    17,    18,    19,    20,    27,    34,    35
 };
 #endif
 
@@ -1108,40 +1109,39 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* S: E  */
-#line 11 "calculator.y"
+#line 12 "calculator.y"
      {
     printf("Result = %d\n", yyval);
     return 0;
 }
-#line 1117 "y.tab.c"
+#line 1118 "y.tab.c"
     break;
 
   case 3: /* E: E '+' E  */
-#line 16 "calculator.y"
+#line 17 "calculator.y"
            { yyval = yyvsp[-2] + yyvsp[0]; }
-#line 1123 "y.tab.c"
+#line 1124 "y.tab.c"
     break;
 
   case 4: /* E: E '-' E  */
-#line 17 "calculator.y"
+#line 18 "calculator.y"
         { yyval = yyvsp[-2] - yyvsp[0]; }
-#line 1129 "y.tab.c"
+#line 1130 "y.tab.c"
     break;
 
   case 5: /* E: E '*' E  */
-#line 18 "calculator.y"
+#line 19 "calculator.y"
         { yyval = yyvsp[-2] * yyvsp[0]; }
-#line 1135 "y.tab.c"
+#line 1136 "y.tab.c"
     break;
 
   case 6: /* E: E '/' E  */
-#line 19 "calculator.y"
+#line 20 "calculator.y"
         {
     if(yyvsp[0] != 0){
         yyval = yyvsp[-2] / yyvsp[0];
     }else{
-        yyerror("Division by zero");
-        YYABORT;
+        yyerror();
     }
 }
 #line 1148 "y.tab.c"
@@ -1153,27 +1153,26 @@ yyreduce:
     if(yyvsp[0] != 0){
         yyval = yyvsp[-2] % yyvsp[0];
     }else{
-        yyerror("Modulo by zero");
-        YYABORT;
+        yyerror();
     }
 }
-#line 1161 "y.tab.c"
+#line 1160 "y.tab.c"
     break;
 
   case 8: /* E: '(' E ')'  */
-#line 35 "calculator.y"
+#line 34 "calculator.y"
             { yyval = yyvsp[-1]; }
-#line 1167 "y.tab.c"
+#line 1166 "y.tab.c"
     break;
 
   case 9: /* E: NUM  */
-#line 36 "calculator.y"
+#line 35 "calculator.y"
       { yyval = yyvsp[0]; }
-#line 1173 "y.tab.c"
+#line 1172 "y.tab.c"
     break;
 
 
-#line 1177 "y.tab.c"
+#line 1176 "y.tab.c"
 
       default: break;
     }
@@ -1366,12 +1365,12 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 38 "calculator.y"
+#line 37 "calculator.y"
 
 
 int yyerror(){
     printf("Entered arithmetic expression is Invalid\n");
-    return 1;
+    exit(0);
 }
 
 int main(){

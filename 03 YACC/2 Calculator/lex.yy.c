@@ -723,13 +723,13 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 8 "calculator.l"
-{ yylval=atoi(yytext); return NUM; }
+{ yylval = atoi(yytext); return NUM; }
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
 #line 9 "calculator.l"
-{ return 0; }
+{;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
