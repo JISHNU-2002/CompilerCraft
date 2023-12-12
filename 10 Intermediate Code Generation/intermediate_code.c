@@ -2,20 +2,33 @@
 #include<string.h>
 
 int main(){
-    int i,j;
+    int i,j=0;
     char input[100],f[5];
     printf("Enter the code : ");
     gets(input);
-    
-    for(i=strlen(input);i>=0;(i=i-2)){
-        strcpy(f[2],input[i]);
-        strcpy(f[1],input[i-1]);
-        strcpy(f[0],input[i-2]);
+    int n=strlen(input);
+    i=n-1;
 
+    while(i>0){
+        f[2] = input[i];
+        f[1] = input[i-1];
+        f[0] = input[i-2];
+
+        if(i==2){
+            printf("%c = t%d\n",input[i-2],j);
+            break;
+        }
+
+        if(i==(n-1)){        
+            printf("t%d = %s\n",j,f);
+        }else{
+            printf("t%d = %s%d\n",j,f,j-1);
+        }
         input[i] = '\0';
         input[i-1] = '\0';
-        strcat(input[i-2],j);
-
-        printf("%s %s\n",input,f);
+        input[i-2] = 't';
+        j++;
+        i=i-2;
     }
+    return 0;
 }
