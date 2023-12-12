@@ -10,10 +10,10 @@ asn : ID '=' E | ID INC | ID DEC ;
 
 cond : scond | scond AND cond | scond OR cond ;
 scond : nid | nid relop nid ;
-nid : ID | NUM
+nid : ID | NUM ;
 relop : L | G | LE | GE | EE | NE ;
 stmt : ID '(' STRING other ')' ';' stmt | asn ';' stmt | ;
-other : ',' ID other | ;
+other : ',' ID other | ',' '&' ID other | ;
 
 E : E'+'E
 | E'-'E
