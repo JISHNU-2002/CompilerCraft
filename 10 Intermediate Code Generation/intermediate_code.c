@@ -14,7 +14,7 @@ int main(){
         f[1] = input[i-1];
         f[0] = input[i-2];
 
-        if(i==2){
+        if(i==2 && f[1]=='='){
             printf("%c = t%d\n",input[i-2],j-1);
             break;
         }else if(i==(n-1)){        
