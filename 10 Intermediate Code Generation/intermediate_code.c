@@ -2,11 +2,11 @@
 #include<string.h>
 
 int main(){
-    int i,j=0;
+    int n,i,j=0;
     char input[100],f[5];
     printf("Enter the code : ");
     gets(input);
-    int n=strlen(input);
+    n=strlen(input);
     i=n-1;
 
     while(i>0){
@@ -15,15 +15,14 @@ int main(){
         f[0] = input[i-2];
 
         if(i==2){
-            printf("%c = t%d\n",input[i-2],j);
+            printf("%c = t%d\n",input[i-2],j-1);
             break;
-        }
-
-        if(i==(n-1)){        
+        }else if(i==(n-1)){        
             printf("t%d = %s\n",j,f);
         }else{
             printf("t%d = %s%d\n",j,f,j-1);
         }
+
         input[i] = '\0';
         input[i-1] = '\0';
         input[i-2] = 't';
