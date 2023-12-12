@@ -14,7 +14,7 @@ scond : nid | nid relop nid ;
 nid : ID | NUM ;
 relop : L | G | LE | GE | EE | NE ;
 stmt : ID '(' STRING other ')' ';' stmt | E ';' stmt | ;
-other : ',' ID other | ;
+other : ',' ID other | ',' '&' ID other | ;
 
 E : ID'='E
 | E'+'E
