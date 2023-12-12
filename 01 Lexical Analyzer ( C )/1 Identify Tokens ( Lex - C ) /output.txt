@@ -1,8 +1,7 @@
 token	lexeme
 --------------
-include	identifier
-stdio	identifier
-h	identifier
+#include<stdio.h>	header file
+#include<stdlib.h>	header file
 int	keyword
 main	identifier
 )	special symbol
