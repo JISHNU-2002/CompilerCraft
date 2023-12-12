@@ -29,12 +29,12 @@ E : ID'='E
 %%
 
 int yyerror(){
-    printf("invalid if elseif else statement\n");
+    printf("invalid if else statement\n");
     return 1;
 }
 
 int main(){
-    printf("Enter the if elseif else statement (press ctrl+D to get output)\n");
+    printf("Enter the if else statement (press ctrl+D to get output)\n");
     yyparse();
     return 0;
 }
