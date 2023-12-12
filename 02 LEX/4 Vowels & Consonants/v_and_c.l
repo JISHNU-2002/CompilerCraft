@@ -1,7 +1,7 @@
 %{
-#include <stdio.h>
-int vowel_count = 0;
-int consonant_count = 0;
+    #include <stdio.h>
+    int vowel_count = 0;
+    int consonant_count = 0;
 %}
 
 %%
