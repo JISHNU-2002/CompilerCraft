@@ -20,5 +20,7 @@ int main(){
         }
         fprintf(fs,"MOV %s,R0\n",res);
     }
+    printf("output file created successfully\n");
+
     return 0;
 }
