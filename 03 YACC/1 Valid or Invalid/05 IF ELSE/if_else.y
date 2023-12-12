@@ -14,7 +14,7 @@ scond : nid | nid relop nid ;
 nid : ID | NUM ;
 relop : L | G | LE | GE | EE | NE ;
 stmt : ID '(' STRING other ')' ';' stmt | E ';' stmt | ;
-other : ',' ID other | ;
+other : ',' ID other | ',' '&' ID other | ;
 
 E : ID'='E
 | E'+'E
@@ -29,12 +29,12 @@ E : ID'='E
 %%
 
 int yyerror(){
-    printf("invalid if else statement\n");
+    printf("invalid if elseif else statement\n");
     return 1;
 }
 
 int main(){
-    printf("Enter the if else statement (press ctrl+D to get output)\n");
+    printf("Enter the if elseif else statement (press ctrl+D to get output)\n");
     yyparse();
     return 0;
 }
