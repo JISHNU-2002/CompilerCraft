@@ -9,10 +9,10 @@ while : WHILE '(' cond ')' '{' stmt '}' { printf("valid while loop\n"); };
 
 cond : scond | scond AND cond | scond OR cond ;
 scond : nid | nid relop nid ;
-nid : ID | NUM
+nid : ID | NUM ; 
 relop : L | G | LE | GE | EE | NE ;
 stmt : ID '(' STRING other ')' ';' stmt | E ';' stmt | ;
-other : ',' ID other | ;
+other : ',' ID other | ',' '&' ID other | ;
 
 E : ID'='E
 | E'+'E
