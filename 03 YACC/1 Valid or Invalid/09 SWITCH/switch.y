@@ -12,7 +12,7 @@ default : DEFAULT ':' stmt BREAK ';' ;
 
 nid : ID | NUM ;
 stmt : ID '(' STRING other ')' ';' stmt | E ';' stmt | ;
-other : ',' ID other | ;
+other : ',' ID other | ',' '&' ID other | ;
 
 E : ID'='E
 | E'+'E
