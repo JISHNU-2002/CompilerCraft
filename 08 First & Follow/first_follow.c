@@ -9,15 +9,26 @@ int n,m=0,i,j,k;
 char a[10][10],f[10];
 
 void first(char c){
-    if(!isupper(c)){
+    if(islower(c)){
         f[m++]=c;
     }
-    for(k=0;k<n;k++){
-        if(a[k][0]==c){
-            if(islower(a[k][2])){
-                f[m++]=a[k][2];
-            }else{ 
-                first(a[k][2]);
+    for(i=0;i<n;i++){
+        if(a[i][0]==c){
+            for(j=2;j<strlen(a[i]);j++){
+                if(islower(a[i][j])){
+                    f[m++]=a[i][j];
+                    break;
+                }else{ 
+                    int temp = m;
+                    first(a[i][j]);
+                    for(int k=temp;k<m;k++){
+                        if(f[k] == 'e'){
+                            first(a[i][j+1]);
+                        }else{
+                            printf("\n%c\n",f[k]);
+                        }
+                    }
+                }
             }
         }
     }
@@ -87,4 +98,3 @@ int main(){
     
     return 0;
 }
-
