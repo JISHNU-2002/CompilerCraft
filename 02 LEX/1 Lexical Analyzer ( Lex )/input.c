@@ -1,6 +1,7 @@
 //C-program to calculate sum
 #include<stdio.h>
-
+/*This is a comment
+block  comment*/
 int main(){
     //This is a single line comment
     int num1=5,num2=10;
