@@ -1,5 +1,5 @@
 %{
-#include<stdio.h>
+    #include<stdio.h>
 %}
 
 %%
@@ -13,7 +13,6 @@
     }
     printf("%s",yytext);
 }
-.|\n { ECHO; }
 %%
 
 int yywrap(){
