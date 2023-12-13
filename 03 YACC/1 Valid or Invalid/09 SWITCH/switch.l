@@ -12,7 +12,7 @@
 [ \t\n]
 [0-9]+ { return NUM; }
 [a-zA-Z][a-zA-Z0-9]* { return ID; }
-\"[^\"\n]*\" { return STRING; }
+\"[^\"]*\" { return STRING; }
 
 "<" { return L; }
 ">" { return G; }
