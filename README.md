@@ -49,11 +49,11 @@ To run Lex files
   ./filename
 ```
 
-To run YACC program ( + Lex)
+To run YACC program ( YACC + Lex )
 
 ```bash
   flex filename.l
-  yacc -d filename.d
+  yacc -d filename.y
   gcc lex.yy.c y.tab.c -o filename
   ./filename
 ```
