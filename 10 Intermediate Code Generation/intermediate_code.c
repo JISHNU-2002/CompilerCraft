@@ -30,7 +30,11 @@ int main(){
             f[0] = input[i-6];
             printf("t%d = %c%c%c\n",j,f[1],f[2],f[3]);
             j++;
-            printf("t%d = t%d%c%c%d\n",j,j-1,f[5],f[6],j-2);
+            if(j-2 < 0){
+                printf("t%d = t%d%c%c\n",j,j-1,f[5],f[6]);
+            }else{
+                printf("t%d = t%d%c%c%d\n",j,j-1,f[5],f[6],j-2);
+            }
             i=i-4;
         }else if(i == 2 && f[1] == '='){
             printf("%c = t%d\n",f[0],j-1);
