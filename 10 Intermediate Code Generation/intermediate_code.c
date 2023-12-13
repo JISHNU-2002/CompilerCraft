@@ -13,7 +13,7 @@ int main(){
         f[2] = input[i];
         f[1] = input[i-1];
         f[0] = input[i-2];
-
+        //this code only work if you use only two variables inside the parenthesis or do not using any parenthesis
         if(input[i] == ')'){
             f[2] = input[i-1];
             f[1] = input[i-2];
