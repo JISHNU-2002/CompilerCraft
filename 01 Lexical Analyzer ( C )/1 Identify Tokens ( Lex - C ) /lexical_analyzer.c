@@ -24,7 +24,7 @@ int main(){
             str[i+1] = '>';
             fprintf(output, "%s\theader file\n", str);
             str[i+2] = '\0';
-        }else if(ch == '+' || ch == '-' || ch == '*' || ch == '/'){
+        }else if(ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '=' || ch == '<' || ch == '>'){
             fprintf(output, "%c\toperator\n", ch);
         }else if (ch == '%' || ch == ':' || ch == '(' || ch == ')' || ch == '[' || ch == ']' || ch == '{' || ch == '}' || ch == ';' || ch == ',' || ch == '?' || ch == '@' || ch == '"'){
             fprintf(output, "%c\tspecial symbol\n", ch);
