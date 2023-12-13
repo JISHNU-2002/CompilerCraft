@@ -3,16 +3,16 @@
 #include <string.h>
 
 int n, m = 0;
-char a[10][10], b[5]; 
+char a[10][10], f[5]; 
 
 void toNFA(char c, char d) {
     for (int i = 0; i < n; i++) {
         if (a[i][0] == d && a[i][1] != 'e') {
-            b[0] = c;
-            b[1] = a[i][1];
-            b[2] = a[i][2];
-            printf("changed : %s\n", b);
-            strcpy(b,"");
+            f[0] = c;
+            f[1] = a[i][1];
+            f[2] = a[i][2];
+            printf("changed : %s\n", f);
+            strcpy(f,"");
         }
     }
 }
