@@ -110,12 +110,11 @@ void follow(char element){
 	if(a[0][0]==element){
 	    f[m++]='$';
 	}
-	int i,j,k;
+	int i,j,k,repeat;
 	for(i=0;i<n;i++){
 		for(j=2;j<strlen(a[i]);j++){
 			if(a[i][j]==element){	
 				if(a[i][j+1]!='\0'){	
-					int repeat;
 					do{
 						int temp = m;
 						first(a[i][j+1]);
