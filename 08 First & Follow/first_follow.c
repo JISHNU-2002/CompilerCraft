@@ -5,7 +5,7 @@
 void first(char);
 void follow(char);
 
-int n,m=0,i,j,k,flag;
+int n,m=0,i,j,k;
 char a[10][10],f[10];
 
 void rem_duplicate(){
@@ -66,17 +66,18 @@ void follow(char c){
         for(j=2;j<strlen(a[i]);j++){
             if(a[i][j]==c){
                 if(a[i][j+1]!='\0'){
+                    int repeat;
 					do{
 						int temp = m;
 						first(a[i][j+1]);
-						flag=0;
+						repeat=0;
 						for(k=temp;k<m;k++){
 		               	 	if(f[k] == 'e'){
-		               	 		flag=1;
+		               	 		repeat=1;
 		               	 		j++;
 		               	 	}			
 		               	}
-                    }while(flag==1 && a[i][j+1]!='\0');
+                    }while(repeat==1 && a[i][j+1]!='\0');
                 }
                 if(a[i][j+1]=='\0' && c!=a[i][0]){
                     follow(a[i][0]);
