@@ -5,12 +5,36 @@
 void first(char);
 void follow(char);
 
-int n,m=0,i,j,k;
+int n,m=0,i,j,k,flag;
 char a[10][10],f[10];
+
+void rem_duplicate(){
+	int cnt=0;
+	int i,j;
+	char res[20];
+	for(i=0;i<m;i++){
+		int flag=1;
+		for(j=0;j<cnt;j++){
+			if(f[i]==res[j] || f[i]==' '){
+			    flag=0;
+			    break;
+			}
+		}
+		if(flag==1){
+			res[cnt++]=f[i];
+		}
+	}
+	strcpy(f,"");
+	m=cnt;
+	for(i=0;i<cnt;i++){
+		f[i]=res[i];
+	}
+}
 
 void first(char c){
     if(islower(c)){
         f[m++]=c;
+        return;
     }
     for(i=0;i<n;i++){
         if(a[i][0]==c){
@@ -19,13 +43,13 @@ void first(char c){
                     f[m++]=a[i][j];
                     break;
                 }else{ 
-                    int temp = m;
                     first(a[i][j]);
-                    for(int k=temp;k<m;k++){
-                        if(f[k] == 'e'){
-                            first(a[i][j+1]);
-                        }else{
-                            printf("\n%c\n",f[k]);
+                    if(f[m-1] != 'e'){
+                        break;
+                    }else{
+                        if(a[i][j+1]!='\0'){
+                            m--;
+                            continue;
                         }
                     }
                 }
@@ -42,17 +66,17 @@ void follow(char c){
         for(j=2;j<strlen(a[i]);j++){
             if(a[i][j]==c){
                 if(a[i][j+1]!='\0'){
-                    int temp = m;
-                    first(a[i][j+1]);
-                    for(k=temp;k<m;k++){
-                        if(f[k] == 'e'){
-                            if(a[i][j+2] != '\0'){
-                                first(a[i][j+2]);
-                            }else{
-                                follow(a[i][0]);
-                            }
-                        }
-                    }
+					do{
+						int temp = m;
+						first(a[i][j+1]);
+						flag=0;
+						for(k=temp;k<m;k++){
+		               	 	if(f[k] == 'e'){
+		               	 		flag=1;
+		               	 		j++;
+		               	 	}			
+		               	}
+                    }while(flag==1 && a[i][j+1]!='\0');
                 }
                 if(a[i][j+1]=='\0' && c!=a[i][0]){
                     follow(a[i][0]);
@@ -77,6 +101,7 @@ int main(){
         printf("Enter the elemet whose first & follow is to be found : ");
         scanf("%c",&c);
         first(c);
+        rem_duplicate();
         printf("First(%c) = { ",c);
         for(i=0;i<m;i++){
             printf("%c ",f[i]);
@@ -85,6 +110,7 @@ int main(){
         strcpy(f," ");
         m=0;
         follow(c);
+        rem_duplicate();
         printf("Follow(%c) = { ",c);
         for(i=0;i<m;i++){
             if(f[i] != 'e'){
