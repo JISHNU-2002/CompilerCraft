@@ -4,31 +4,19 @@
 
 void first(char);
 void follow(char);
+void remove_duplicate();
 
-int n,m=0,i,j,k;
+int n,m=0,i,j,k,flag;
 char a[10][10],f[10];
 
-void rem_duplicate(){
-	int cnt=0;
-	int i,j;
-	char res[20];
-	for(i=0;i<m;i++){
-		int flag=1;
-		for(j=0;j<cnt;j++){
-			if(f[i]==res[j] || f[i]==' '){
-			    flag=0;
-			    break;
-			}
-		}
-		if(flag==1){
-			res[cnt++]=f[i];
-		}
-	}
-	strcpy(f,"");
-	m=cnt;
-	for(i=0;i<cnt;i++){
-		f[i]=res[i];
-	}
+void remove_duplicate(){
+    for(i=0;i<m;i++){
+        for(j=i+1;j<m;j++){
+            if(f[i]==f[j]){
+                f[j] = '0';
+            }
+        }
+    }
 }
 
 void first(char c){
@@ -66,18 +54,17 @@ void follow(char c){
         for(j=2;j<strlen(a[i]);j++){
             if(a[i][j]==c){
                 if(a[i][j+1]!='\0'){
-                    int repeat;
 					do{
 						int temp = m;
 						first(a[i][j+1]);
-						repeat=0;
+						flag=0;
 						for(k=temp;k<m;k++){
 		               	 	if(f[k] == 'e'){
-		               	 		repeat=1;
+		               	 		flag=1;
 		               	 		j++;
 		               	 	}			
 		               	}
-                    }while(repeat==1 && a[i][j+1]!='\0');
+                    }while(flag==1 && a[i][j+1]!='\0');
                 }
                 if(a[i][j+1]=='\0' && c!=a[i][0]){
                     follow(a[i][0]);
@@ -105,7 +92,9 @@ int main(){
         rem_duplicate();
         printf("First(%c) = { ",c);
         for(i=0;i<m;i++){
-            printf("%c ",f[i]);
+            if(f[i] != '0'){
+                printf("%c ",f[i]);
+            }
         }printf("}\n");
 
         strcpy(f," ");
@@ -114,7 +103,7 @@ int main(){
         rem_duplicate();
         printf("Follow(%c) = { ",c);
         for(i=0;i<m;i++){
-            if(f[i] != 'e'){
+            if(f[i] != 'e' && f[i] != '0'){
                 printf("%c ",f[i]);
             }
         }printf("}\n");
