@@ -3,7 +3,8 @@
 
 ## Experiments
 
-1.  Lexical Analyzer ( Token Identification ) using C [( lexical_analyzer.c )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/01%20Lexical%20Analyzer%20(%20C%20)/1%20Identify%20Tokens%20(%20Lex%20-%20C%20)%20/lexical_analyzer.c)
+1.  Lexical Analyzer ( Token Identification ) using C [( lexical_analyzer.c )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/01%20Lexical%20Analyzer%20(%20C%20)/1%20Identify%20Tokens%20(%20Lex%20-%20C%20)%20/lexical_analyzer.c) [( exp1.pdf )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/01%20Lexical%20Analyzer%20(%20C%20)/1%20Identify%20Tokens%20(%20Lex%20-%20C%20)%20/lexical_analyzer.c)
+
 
 
 2.  Lexical Analyzer using Lex tool      [( lexical_analyzer.l )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/02%20LEX/1%20Lexical%20Analyzer%20(%20Lex%20)/lexical_analyzer.l)
