@@ -1,5 +1,6 @@
 # s7-CD-LAB-ktu
-
+PLEASE GO THROUGH THE README FILE TO FIND CODEs AND PDFs EASILY
+For Additional Programs : Valid C Expression & Valid Loop and Conditional Statements ( if-else | for | while | do-while | switch ) - scroll below
 
 ## Experiments
 
@@ -61,22 +62,22 @@ To run YACC program ( + Lex )
 
 ## Additional Programs
 
-- C program to Remove comments [( remove_comts.c )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/01%20Lexical%20Analyzer%20(%20C%20)/2%20Remove%20Comments/remove_comts.c)
+- C program to Remove comments [( remove_comts.c )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/01%20Lexical%20Analyzer%20(%20C%20)/2%20Remove%20Comments/remove_comts.c) [( exp1b )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp1b.pdf)
 
-- YACC - Valid C Expression ( a = b + c ; ) [( Valid C Expression )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/03%20Valid%20Expression%20(%20C%20))
+- YACC - A^n B [( A^n B )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/04%20A%5En%20B) [( exp7b )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp7b.pdf)
 
-- YACC - A^n B [( A^n B )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/04%20A%5En%20B)
+- YACC - Valid C Expression ( a = b + c ; ) [( Valid C Expression )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/03%20Valid%20Expression%20(%20C%20)) [( exp7c )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp7c.pdf)
 
 - YACC - Valid Loop and Conditional Statements 
-    - if-else [( IF ELSE )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/05%20IF%20ELSE)
+    - if-else [( IF ELSE )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/05%20IF%20ELSE) [( exp7d )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp7d.pdf)
 
-    - for [( FOR )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/06%20FOR)
+    - for [( FOR )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/06%20FOR) [( exp7e )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp7e.pdf)
 
-    - while [( WHILE )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/07%20WHILE)
+    - while [( WHILE )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/07%20WHILE) [( exp7f )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp7f.pdf)
 
-    - do-while [( DO WHILE )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/08%20DO%20WHILE)
+    - do-while [( DO WHILE )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/08%20DO%20WHILE) [( exp7g )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp7g.pdf)
 
-    - switch [( SWITCH )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/09%20SWITCH)
+    - switch [( SWITCH )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/tree/main/03%20YACC/1%20Valid%20or%20Invalid/09%20SWITCH) [( exp7h )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp7h.pdf)
 
 
 # CSL411 COMPILER LAB
