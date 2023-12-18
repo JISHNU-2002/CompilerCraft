@@ -55,7 +55,7 @@ void follow(char c){
         for(j=2;j<strlen(a[i]);j++){
             if(a[i][j]==c){
                 if(a[i][j+1]!='\0'){
-				    do{
+                    do{
                         int temp = m;
                         first(a[i][j+1]);
                         flag=0;
