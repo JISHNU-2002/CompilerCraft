@@ -55,16 +55,16 @@ void follow(char c){
         for(j=2;j<strlen(a[i]);j++){
             if(a[i][j]==c){
                 if(a[i][j+1]!='\0'){
-					do{
-						int temp = m;
-						first(a[i][j+1]);
-						flag=0;
-						for(k=temp;k<m;k++){
-		               	 	if(f[k] == 'e'){
-		               	 		flag=1;
-		               	 		j++;
-		               	 	}			
-		               	}
+				    do{
+                        int temp = m;
+                        first(a[i][j+1]);
+                        flag=0;
+                        for(k=temp;k<m;k++){
+                            if(f[k] == 'e'){
+                                flag=1;
+                                j++;
+                            }			
+                        }
                     }while(flag==1 && a[i][j+1]!='\0');
                 }
                 if(a[i][j+1]=='\0' && c!=a[i][0]){
