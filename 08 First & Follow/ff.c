@@ -17,8 +17,8 @@ void rem_duplicate(){
 		int flag=1;
 		for(j=0;j<cnt;j++){
 			if(f[i]==res[j] || f[i]==' '){
-			    flag=0;
-			    break;
+				flag=0;
+				break;
 			}
 		}
 		if(flag==1){
@@ -33,49 +33,49 @@ void rem_duplicate(){
 }
 
 int main(){
-    printf("enter number of productions : ");
-    scanf("%d",&n);
-    printf("\nenter productions - \n");
-    int i,j;
-    char ch;
-    for(i=0;i<n;i++){
-        scanf("%s%c",a[i],&ch);
-    }
+	printf("enter number of productions : ");
+	scanf("%d",&n);
+	printf("\nenter productions - \n");
+	int i,j;
+	char ch;
+	for(i=0;i<n;i++){
+		scanf("%s%c",a[i],&ch);
+	}
 
-    int repeat;
-    do{
-        printf("\nenter the element whose first is to be discovered : ");
-        char element;
-        scanf(" %c",&element);     
-        first(element);
-        rem_duplicate();
-        printf("\nFirst of %c is = ",element);
-        for(i=0;i<m;i++){
-                printf(" %c",f[i]);
-        }
-        strcpy(f,"");
-        m=0;
-        
-        follow(element);
-        for(i=0;i<m;i++){
-            if(f[i]=='e'){
-                f[i]=' '; 
-            }
-        }
-        rem_duplicate();
-        printf("\nFollow of %c is = ",element);
-        for(i=0;i<m;i++){
-            printf(" %c",f[i]);
-        }
-        
-        strcpy(f,"");
-        m=0; 
+	int repeat;
+	do{
+		printf("\nenter the element whose first is to be discovered : ");
+		char element;
+		scanf(" %c",&element);     
+		first(element);
+		rem_duplicate();
+		printf("\nFirst of %c is = ",element);
+		for(i=0;i<m;i++){
+				printf(" %c",f[i]);
+		}
+		strcpy(f,"");
+		m=0;
+		
+		follow(element);
+		for(i=0;i<m;i++){
+			if(f[i]=='e'){
+				f[i]=' '; 
+			}
+		}
+		rem_duplicate();
+		printf("\nFollow of %c is = ",element);
+		for(i=0;i<m;i++){
+			printf(" %c",f[i]);
+		}
+		
+		strcpy(f,"");
+		m=0; 
 
-        printf("\ndo you want to repeat 1/0 : ");
-        scanf("%d",&repeat);
-    }while(repeat==1);
-    
-    return 0;
+		printf("\ndo you want to repeat 1/0 : ");
+		scanf("%d",&repeat);
+	}while(repeat==1);
+	
+	return 0;
 }
 
 void first(char element){
@@ -88,27 +88,27 @@ void first(char element){
 		if(a[i][0]==element){
 			for(j=2;j<strlen(a[i]);j++){
 				if(islower(a[i][j])){
-                    f[m++] = a[i][j];
-                    break;
+					f[m++] = a[i][j];
+					break;
 				}else{ 
-				    first(a[i][j]);
-				    if(f[m-1]!='e'){
-				    	break;
-				    }else{
-				    	if(a[i][j+1]!='\0'){
-					    	m--;
-					    	continue;
-				    	}
-				    }
-                }
-            }
+					first(a[i][j]);
+					if(f[m-1]!='e'){
+						break;
+					}else{
+						if(a[i][j+1]!='\0'){
+							m--;
+							continue;
+						}
+					}
+				}
+			}
 		}
 	}
 }
 
 void follow(char element){
 	if(a[0][0]==element){
-	    f[m++]='$';
+		f[m++]='$';
 	}
 	int i,j,k,repeat;
 	for(i=0;i<n;i++){
@@ -120,12 +120,12 @@ void follow(char element){
 						first(a[i][j+1]);
 						repeat=0;
 						for(k=temp;k<m;k++){
-		               	 	if(f[k] == 'e'){
-		               	 		repeat=1;
-		               	 		j++;
-		               	 	}    	 			
-		               	}
-                    }while(repeat==1 && a[i][j+1]!='\0');
+							if(f[k] == 'e'){
+								repeat=1;
+								j++;
+							}    	 			
+						}
+					}while(repeat==1 && a[i][j+1]!='\0');
 				}
 				if(a[i][j+1]=='\0' && element!=a[i][0]){
 					follow(a[i][0]);
