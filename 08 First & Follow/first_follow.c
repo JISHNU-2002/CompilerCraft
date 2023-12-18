@@ -49,6 +49,7 @@ void first(char c){
 void follow(char c){
     if(a[0][0]==c){
         f[m++]='$';
+        return;
     }
     for(i=0;i<n;i++){
         for(j=2;j<strlen(a[i]);j++){
