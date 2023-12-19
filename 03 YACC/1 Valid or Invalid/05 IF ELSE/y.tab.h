@@ -68,7 +68,8 @@ extern int yydebug;
     AND = 269,                     /* AND  */
     ID = 270,                      /* ID  */
     NUM = 271,                     /* NUM  */
-    STRING = 272                   /* STRING  */
+    STRING = 272,                  /* STRING  */
+    ELSEIF = 273                   /* ELSEIF  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -92,6 +93,7 @@ extern int yydebug;
 #define ID 270
 #define NUM 271
 #define STRING 272
+#define ELSEIF 273
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED

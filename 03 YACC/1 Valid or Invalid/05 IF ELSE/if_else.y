@@ -2,11 +2,13 @@
     #include<stdio.h>
 %}
 
-%token IF ELSE L G LE GE EE NE INC DEC OR AND ID NUM STRING 
+%token IF ELSE L G LE GE EE NE INC DEC OR AND ID NUM STRING ELSEIF
 
 %%
-S : if else { printf("valid if else statement\n"); };
+S : ladder { printf("valid if else ladder statement\n"); };
+ladder : if elseif else ;
 if : IF '(' cond ')' '{' stmt '}' ;
+elseif : ELSEIF '(' cond ')' '{' stmt '}' elseif | ;
 else : ELSE '{' stmt '}' | ;
 
 cond : scond | scond AND cond | scond OR cond ;

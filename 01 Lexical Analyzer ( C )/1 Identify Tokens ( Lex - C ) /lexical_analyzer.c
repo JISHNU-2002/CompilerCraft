@@ -48,7 +48,7 @@ int main(){
             str[i] = ch;
             ch = fgetc(input);
 
-            while(isalnum(ch) && i < 19){
+            while(isalnum(ch)){
                 i++;
                 str[i] = ch;
                 ch = fgetc(input);

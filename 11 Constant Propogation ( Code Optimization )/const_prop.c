@@ -10,7 +10,7 @@ int n;
 
 void change(int p,char *res,char org[5]){
     for(int i=p+1;i<n;i++){
-        if(strcmp(arr[i].op,"=")==0 && strcmp(arr[i].res,org)==0){
+        if(strcmp(arr[i].res,org)==0){
             break;
         }else{
             if(strcmp(arr[p].res,arr[i].arg1)==0){

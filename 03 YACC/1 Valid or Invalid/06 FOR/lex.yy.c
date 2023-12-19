@@ -402,8 +402,8 @@ static const YY_CHAR yy_ec[256] =
 
 static const YY_CHAR yy_meta[18] =
     {   0,
-        1,    1,    2,    1,    1,    1,    1,    1,    3,    1,
-        1,    1,    3,    3,    3,    3,    1
+        1,    1,    1,    1,    1,    1,    1,    1,    2,    1,
+        1,    1,    2,    2,    2,    2,    1
     } ;
 
 static const flex_int16_t yy_base[36] =
@@ -411,7 +411,7 @@ static const flex_int16_t yy_base[36] =
         0,    0,   35,   36,   36,   36,   23,   28,   26,   24,
        22,   20,   17,   16,   15,    0,   10,    7,   36,   18,
        36,   36,   36,   36,   13,   36,   36,   36,    0,    5,
-       36,    0,   36,   17,   16
+       36,    0,   36,   17,   18
     } ;
 
 static const flex_int16_t yy_def[36] =
@@ -425,7 +425,7 @@ static const flex_int16_t yy_def[36] =
 static const flex_int16_t yy_nxt[54] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
-       14,   15,   16,   17,   16,   16,   18,   20,   29,   20,
+       14,   15,   16,   17,   16,   16,   18,   20,   20,   29,
        32,   25,   21,   31,   30,   28,   27,   26,   25,   24,
        23,   22,   21,   19,   33,    3,   33,   33,   33,   33,
        33,   33,   33,   33,   33,   33,   33,   33,   33,   33,
@@ -435,7 +435,7 @@ static const flex_int16_t yy_nxt[54] =
 static const flex_int16_t yy_chk[54] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,   34,   35,   34,
+        1,    1,    1,    1,    1,    1,    1,   34,   34,   35,
        30,   25,   20,   18,   17,   15,   14,   13,   12,   11,
        10,    9,    8,    7,    3,   33,   33,   33,   33,   33,
        33,   33,   33,   33,   33,   33,   33,   33,   33,   33,
@@ -759,6 +759,7 @@ YY_RULE_SETUP
 { return ID; }
 	YY_BREAK
 case 5:
+/* rule 5 can match eol */
 YY_RULE_SETUP
 #line 12 "for.l"
 { return STRING; }
@@ -823,7 +824,7 @@ YY_RULE_SETUP
 #line 25 "for.l"
 ECHO;
 	YY_BREAK
-#line 827 "lex.yy.c"
+#line 828 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
