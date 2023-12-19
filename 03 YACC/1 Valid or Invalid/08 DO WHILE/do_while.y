@@ -10,7 +10,7 @@ do : DO '{' stmt '}' ;
 while : WHILE '(' cond ')' ';' ;
 
 cond : scond | scond AND cond | scond OR cond ;
-scond : nid | nid relop nid ;
+scond : nid | nid relop scond | ;
 nid : ID | NUM ;
 relop : L | G | LE | GE | EE | NE ;
 stmt : ID '(' STRING other ')' ';' stmt | E ';' stmt | ;
