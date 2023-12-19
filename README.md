@@ -34,7 +34,7 @@
 
 14. Recursive Descent Parser [[ recursive.c ]](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/09%20Recursive%20Descent%20Parser%20(%20Top%20Down%20)/recursive.c) [( exp14.pdf )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp14.pdf)
 
-15. Intermediate Code Generation [[ intermediate_code.c ]](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/10%20Intermediate%20Code%20Generation/intermediate_code.c) [( exp15.pdf )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp15.pdf)
+15. Intermediate Code Generation [[ intermediate_code.c ]](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/10%20Intermediate%20Code%20Generation/intermediate.c) [( exp15.pdf )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp15.pdf)
 
 16. Constant Propogation [[ const_prop.c ]](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/11%20Constant%20Propogation%20(%20Code%20Optimization%20)/const_prop.c) [( exp16.pdf )](https://github.com/JISHNU-2002/s7-CD-LAB-ktu/blob/main/00%20DOCS/pdf/exp16.pdf)
 
