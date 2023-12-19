@@ -351,8 +351,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 21
-#define YY_END_OF_BUFFER 22
+#define YY_NUM_RULES 19
+#define YY_END_OF_BUFFER 20
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -362,10 +362,10 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[43] =
     {   0,
-        0,    0,   22,   20,    4,    4,   20,   20,   20,    8,
-        9,    5,   10,   20,   11,    6,    6,    6,   20,   15,
-        0,    7,   19,   16,   17,    5,   12,   14,   13,    6,
-        1,    6,    6,   18,    6,    6,    6,    6,    6,    2,
+        0,    0,   20,   18,    4,    4,   18,   18,   18,   18,
+       18,    5,    8,   18,    9,    6,    6,    6,   18,   13,
+        0,    7,   17,   14,   15,    5,   10,   12,   11,    6,
+        1,    6,    6,   16,    6,    6,    6,    6,    6,    2,
         3,    0
     } ;
 
@@ -761,96 +761,86 @@ YY_RULE_SETUP
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 11 "do_while.l"
+#line 10 "do_while.l"
 
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 12 "do_while.l"
+#line 11 "do_while.l"
 { return NUM; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 13 "do_while.l"
+#line 12 "do_while.l"
 { return ID; }
 	YY_BREAK
 case 7:
 /* rule 7 can match eol */
 YY_RULE_SETUP
-#line 14 "do_while.l"
+#line 13 "do_while.l"
 { return STRING; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 16 "do_while.l"
-{ return P; }
+#line 15 "do_while.l"
+{ return L; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 17 "do_while.l"
-{ return M; }
+#line 16 "do_while.l"
+{ return G; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 18 "do_while.l"
-{ return L; }
+#line 17 "do_while.l"
+{ return LE; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 19 "do_while.l"
-{ return G; }
+#line 18 "do_while.l"
+{ return GE; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 20 "do_while.l"
-{ return LE; }
+#line 19 "do_while.l"
+{ return EE; }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 21 "do_while.l"
-{ return GE; }
+#line 20 "do_while.l"
+{ return NE; }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 22 "do_while.l"
-{ return EE; }
+#line 21 "do_while.l"
+{ return INC; }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 23 "do_while.l"
-{ return NE; }
+#line 22 "do_while.l"
+{ return DEC; }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 24 "do_while.l"
-{ return INC; }
+#line 23 "do_while.l"
+{ return OR; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 25 "do_while.l"
-{ return DEC; }
+#line 24 "do_while.l"
+{ return AND; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 26 "do_while.l"
-{ return OR; }
+#line 25 "do_while.l"
+{ return yytext[0]; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 27 "do_while.l"
-{ return AND; }
-	YY_BREAK
-case 20:
-YY_RULE_SETUP
-#line 28 "do_while.l"
-{ return yytext[0]; }
-	YY_BREAK
-case 21:
-YY_RULE_SETUP
-#line 29 "do_while.l"
+#line 26 "do_while.l"
 ECHO;
 	YY_BREAK
-#line 854 "lex.yy.c"
+#line 844 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1855,7 +1845,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 29 "do_while.l"
+#line 26 "do_while.l"
 
 
 int yywrap(){
