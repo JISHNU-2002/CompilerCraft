@@ -71,7 +71,7 @@ int main(){
         }
     }
 
-	printf("output file created successfully\n");
+    printf("output file created successfully\n");
     fclose(input);
     fclose(output);
 

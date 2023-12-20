@@ -25,7 +25,6 @@ int pr(char elem) {
     }
 }
 
-
 void infix_to_postfix() {
     char ch, elem;
     int i = 2, k = 0;
@@ -36,7 +35,8 @@ void infix_to_postfix() {
         if (ch == '('){
             push(ch);
         } else if (isalnum(ch)){
-            postfix[k++] = ch;
+            postfix[k] = ch;
+            k++;
         } else if (ch == ')') {
             while (stack[top] != '('){
                 postfix[k++] = pop();
@@ -59,7 +59,8 @@ void infix_to_postfix() {
 
 void intermediate() {
     char ch,num='A';
-    int i = 0, op1, op2;
+    int i = 0;
+    char op1, op2;
     while((ch = postfix[i]) != '\0') {
         if(isalnum(ch)){
             push(ch);

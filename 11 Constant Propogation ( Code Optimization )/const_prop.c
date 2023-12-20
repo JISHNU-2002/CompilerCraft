@@ -8,9 +8,9 @@ struct exp{
 }arr[10];
 int n;
 
-void change(int p,char *res,char org[5]){
+void change(int p,char *res){
     for(int i=p+1;i<n;i++){
-        if(strcmp(arr[i].res,org)==0){
+        if(strcmp(arr[i].res,arr[p].res)==0){
             break;
         }else{
             if(strcmp(arr[p].res,arr[i].arg1)==0){
@@ -25,7 +25,7 @@ void change(int p,char *res,char org[5]){
 
 int main(){
     int i,arg1,arg2,res;
-    char op,res1[5],org[5];
+    char op,res1[5];
 
     printf("Enter the no of expressions = ");
     scanf("%d",&n);
@@ -40,7 +40,6 @@ int main(){
             arg1 = atoi(arr[i].arg1);
             arg2 = atoi(arr[i].arg2);
                 
-            strcpy(org, arr[i].res);
             switch(op){
                 case '+' : res = arg1+arg2; break;
                 case '-' : res = arg1-arg2; break;
@@ -51,7 +50,7 @@ int main(){
                 default : break;
             }
             sprintf(res1,"%d",res);
-            change(i,res1,org);
+            change(i,res1);
         }
     }
     printf("Optimized code\n");
