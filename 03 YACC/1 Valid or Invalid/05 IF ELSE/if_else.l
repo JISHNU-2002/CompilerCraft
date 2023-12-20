@@ -6,6 +6,7 @@
 %%
 "if" { return IF; }
 "else" { return ELSE; }
+"elseif" { return ELSEIF; }
 
 [ \t\n]
 [0-9]+ { return NUM; }

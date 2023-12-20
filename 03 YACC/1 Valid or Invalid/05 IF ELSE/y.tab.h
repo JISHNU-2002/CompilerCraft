@@ -55,21 +55,21 @@ extern int yydebug;
     YYerror = 256,                 /* error  */
     YYUNDEF = 257,                 /* "invalid token"  */
     IF = 258,                      /* IF  */
-    ELSE = 259,                    /* ELSE  */
-    L = 260,                       /* L  */
-    G = 261,                       /* G  */
-    LE = 262,                      /* LE  */
-    GE = 263,                      /* GE  */
-    EE = 264,                      /* EE  */
-    NE = 265,                      /* NE  */
-    INC = 266,                     /* INC  */
-    DEC = 267,                     /* DEC  */
-    OR = 268,                      /* OR  */
-    AND = 269,                     /* AND  */
-    ID = 270,                      /* ID  */
-    NUM = 271,                     /* NUM  */
-    STRING = 272,                  /* STRING  */
-    ELSEIF = 273                   /* ELSEIF  */
+    ELSEIF = 259,                  /* ELSEIF  */
+    ELSE = 260,                    /* ELSE  */
+    L = 261,                       /* L  */
+    G = 262,                       /* G  */
+    LE = 263,                      /* LE  */
+    GE = 264,                      /* GE  */
+    EE = 265,                      /* EE  */
+    NE = 266,                      /* NE  */
+    INC = 267,                     /* INC  */
+    DEC = 268,                     /* DEC  */
+    OR = 269,                      /* OR  */
+    AND = 270,                     /* AND  */
+    ID = 271,                      /* ID  */
+    NUM = 272,                     /* NUM  */
+    STRING = 273                   /* STRING  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -79,21 +79,21 @@ extern int yydebug;
 #define YYerror 256
 #define YYUNDEF 257
 #define IF 258
-#define ELSE 259
-#define L 260
-#define G 261
-#define LE 262
-#define GE 263
-#define EE 264
-#define NE 265
-#define INC 266
-#define DEC 267
-#define OR 268
-#define AND 269
-#define ID 270
-#define NUM 271
-#define STRING 272
-#define ELSEIF 273
+#define ELSEIF 259
+#define ELSE 260
+#define L 261
+#define G 262
+#define LE 263
+#define GE 264
+#define EE 265
+#define NE 266
+#define INC 267
+#define DEC 268
+#define OR 269
+#define AND 270
+#define ID 271
+#define NUM 272
+#define STRING 273
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
