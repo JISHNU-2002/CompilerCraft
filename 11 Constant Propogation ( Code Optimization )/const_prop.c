@@ -37,19 +37,8 @@ int main(){
     for(i=0;i<n;i++){
         if((isdigit(arr[i].arg1[0]) || arr[i].arg1[0] == '-') && (isdigit(arr[i].arg2[0]) || arr[i].arg2[0] == '-') || strcmp(arr[i].op,"=")==0 && (isdigit(arr[i].arg1[0]) || arr[i].arg1[0] == '-')){
             op = arr[i].op[0];
-            if(arr[i].arg1[0] == '-') {
-                arg1 = atoi(arr[i].arg1 + 1); 
-                arg1 = -arg1;
-            }else{
-                arg1 = atoi(arr[i].arg1);
-            }
-
-            if(arr[i].arg2[0] == '-') {
-                arg2 = atoi(arr[i].arg2 + 1); 
-                arg2 = -arg2;
-            }else{
-                arg2 = atoi(arr[i].arg2);
-            }
+            arg1 = atoi(arr[i].arg1);
+            arg2 = atoi(arr[i].arg2);
                 
             strcpy(org, arr[i].res);
             switch(op){
