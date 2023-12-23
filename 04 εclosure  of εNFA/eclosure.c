@@ -5,6 +5,17 @@
 int n,m = 0,p=0;
 char a[10][10],f[10],d[10];
 
+void remove_duplicate(){
+    int i,j;
+    for(i=0;i<m;i++){
+        for(j=i+1;j<m;j++){
+            if(f[i]==f[j]){
+                f[j]='*';
+            }
+        }
+    }
+}
+
 int check(){
     int i,flag=0;
     if(p>=3){
@@ -57,10 +68,13 @@ int main() {
         printf("Enter the state whose e-closure to be found : ");
         scanf("%c",&c);
 
-        printf("e-closure(%c) = { %c ",c,c);
         eclosure(c);
+        remove_duplicate();
+        printf("e-closure(%c) = { %c ",c,c);
         for(i=0;i<m;i++) {
-            printf("%c ",f[i]);
+            if(f[i] != '*'){
+                printf("%c ",f[i]);
+            }
         }
         printf("}\n");
         strcpy(f," ");
