@@ -18,15 +18,15 @@ char pop() {
 
 int pr(char elem) {
     switch (elem) {
-        case '#':return 0;
-        case '(':return 1;
-        case '+':case '-':return 2;
-        case '*':case '/':return 3;
+        case '#' : return 0;
+        case '(' : return 1;
+        case '+' : case '-' : return 2;
+        case '*' : case '/' : return 3;
     }
 }
 
 void infix_to_postfix() {
-    char ch, elem;
+    char ch, d;
     int i = 2, k = 0;
     
     push('#');
@@ -39,12 +39,14 @@ void infix_to_postfix() {
             k++;
         } else if (ch == ')') {
             while (stack[top] != '('){
-                postfix[k++] = pop();
+                postfix[k] = pop();
+                k++;
             }
-            elem = pop();
+            d = pop();
         } else {
             while (pr(stack[top]) >= pr(ch)){
-                postfix[k++] = pop();
+                postfix[k] = pop();
+                k++;
             }
             push(ch);
         }
@@ -52,32 +54,32 @@ void infix_to_postfix() {
     }
 
     while (stack[top] != '#'){
-        postfix[k++] = pop();
+        postfix[k] = pop();
+        k++;
     }
     postfix[k] = '\0';
 }
 
 void intermediate() {
-    char ch,num='A';
+    char ch,op1,op2,num = 'A';
     int i = 0;
-    char op1, op2;
     while((ch = postfix[i]) != '\0') {
         if(isalnum(ch)){
             push(ch);
         }else{
             op2 = pop();
             op1 = pop();
-            printf("\n%c=%c%c%c",num,op1,ch,op2);
+            printf("%c = %c %c %c\n",num,op1,ch,op2);
             push(num);
             num++;
         }
         i++;
     }
-    printf("\n%c=%c\n",input[0],stack[top]);
+    printf("%c = %c\n",input[0],stack[top]);
 }
 
 void main() {
-    printf("Input the expression: ");
+    printf("Input the expression : ");
     gets(input);
     infix_to_postfix();
     top = -1;
