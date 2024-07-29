@@ -1,4 +1,4 @@
-# s7-CD-LAB-ktu
+# COMPILER DESIGN
 - PLEASE GO THROUGH THE README FILE TO FIND CODEs AND PDFs EASILY
 - For Additional Programs : Valid C Expression & Valid Loop and Conditional Statements ( if-else | for | while | do-while | switch ) - scroll below
 
